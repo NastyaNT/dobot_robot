@@ -24,16 +24,19 @@
 Вкладка Planning Groups. Для добавления группы планирования нажимаем кнопку Add Group. Добавляем группу robot_arm:
 - В поле Group Name пишем название группы robot_arm
 - В Kinematic Solver выбираем kdl kinematics plugin/KDLKinematicsPlugin
+
 Нажимем Add Joints. С левого поля в правое переносим необходимые сочленения. <br/>
 Двойной щелчок по Links. Добавляем звенья. <br/>
 Добавляем группу robot_hand:
 - В поле Group Name пишем название группы robot_arm
 - В Kinematic Solver оставляем None
+
 Добавляем сочленения и звенья. <br/>
 На вкладке End Effectors нажимаем кнопку Add End Effector.
 - В поле End Effector Name пишем имя конечного эффектора hand
 - В поле End Effector Group выбираем robot_hand
 - В поле Parent Link выбираем link5
+
 Переходим на вкладку Controllers. Нажимаем Auto Add Follow Joints Trajectory Controllers For Each Planning Group. Меняем Controller Type на position_controllers/JointTrajectoryController. <br/>
 Переходим на вкладку Simulation. Нажимаем на кнопку Generate URDF. Копируем по кнопке Copy to Clipboard. Создаем файл в рабочей директории и вставляем код. Этот файл с описанием робота будем загружать при запуске симуляции. <br/>
 На вкладке Author Information  заполняем поля. <br/>
