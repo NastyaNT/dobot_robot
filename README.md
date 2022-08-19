@@ -1,4 +1,4 @@
-# Работа с github через консоль
+# Работа с github через консоль https://htmlacademy.ru/blog/best/git-console
 ## Скачиваем к себе репозиторий, делаем изменения у себя, добавляемя изменнеия в репозитоий
 1. git clone https://github.com/NastyaNT/dobot_robot.git
 2. добавляем изменения в файлы
