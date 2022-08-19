@@ -17,30 +17,25 @@
 1. git fetch
 2. git merge origin
 ## Создание пакета для работы с Moveit
-Запуск помощника MoveIt: roslaunch moveit_setup_assistant setup_assistant.launch <br/>
-На стартовой странице нажимаем кнопку Create New MoveIt Configuration Package. <br/>
-Выбираем путь до модели робота (формат .xacro или .urdf), нажимаем кнопку Load Files. <br/>
-Переходим на вкладку Self-Collisions. Генерируем матрицу столкновений по кнопке Generate Collision Matrix <br/>
-Вкладка Planning Groups. Для добавления группы планирования нажимаем кнопку Add Group. Добавляем группу robot_arm:
+1. Запуск помощника MoveIt: roslaunch moveit_setup_assistant setup_assistant.launch 
+2. На стартовой странице нажимаем кнопку Create New MoveIt Configuration Package. Выбираем путь до модели робота (формат .xacro или .urdf), нажимаем кнопку Load Files. 
+4. Переходим на вкладку Self-Collisions. Генерируем матрицу столкновений по кнопке Generate Collision Matrix 
+5. Вкладка Planning Groups. Для добавления группы планирования нажимаем кнопку Add Group. Добавляем группу robot_arm:
 - В поле Group Name пишем название группы robot_arm
 - В Kinematic Solver выбираем kdl kinematics plugin/KDLKinematicsPlugin
-
-Нажимем Add Joints. С левого поля в правое переносим необходимые сочленения. <br/>
-Двойной щелчок по Links. Добавляем звенья. <br/>
-Добавляем группу robot_hand:
+6. Нажимем Add Joints. С левого поля в правое переносим необходимые сочленения. 
+7. Двойной щелчок по Links. Добавляем звенья. 
+8. Добавляем группу robot_hand:
 - В поле Group Name пишем название группы robot_arm
 - В Kinematic Solver оставляем None
-
-Добавляем сочленения и звенья. <br/>
-На вкладке End Effectors нажимаем кнопку Add End Effector.
+9. Добавляем сочленения и звенья. На вкладке End Effectors нажимаем кнопку Add End Effector.
 - В поле End Effector Name пишем имя конечного эффектора hand
 - В поле End Effector Group выбираем robot_hand
 - В поле Parent Link выбираем link5
-
-Переходим на вкладку Controllers. Нажимаем Auto Add Follow Joints Trajectory Controllers For Each Planning Group. Меняем Controller Type на position_controllers/JointTrajectoryController. <br/>
-Переходим на вкладку Simulation. Нажимаем на кнопку Generate URDF. Копируем по кнопке Copy to Clipboard. Создаем файл в рабочей директории и вставляем код. Этот файл с описанием робота будем загружать при запуске симуляции. <br/>
-На вкладке Author Information  заполняем поля. <br/>
-На вкладке Configuration Files выбираем куда сохранить файлы. Нажимаем кнопку Generate Package. Выскочит ошибка, что не заданы виртуальные суставы. Просто нажимаем OK.
+10. Переходим на вкладку Controllers. Нажимаем Auto Add Follow Joints Trajectory Controllers For Each Planning Group. Меняем Controller Type на position_controllers/JointTrajectoryController. 
+11. Переходим на вкладку Simulation. Нажимаем на кнопку Generate URDF. Копируем по кнопке Copy to Clipboard. Создаем файл в рабочей директории и вставляем код. Этот файл с описанием робота будем загружать при запуске симуляции.
+12. На вкладке Author Information  заполняем поля. 
+13. На вкладке Configuration Files выбираем куда сохранить файлы. Нажимаем кнопку Generate Package. Выскочит ошибка, что не заданы виртуальные суставы. Просто нажимаем OK.
 ## Инициализация
 - source /opt/ros/noetic/setup.bash
 - source ~/catkin_ws/devel/setup.bash
