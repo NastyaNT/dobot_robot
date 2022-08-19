@@ -1,0 +1,352 @@
+<sdf version='1.7'>
+  <model name='dobot'>
+  
+    <joint name='fixed' type='fixed'>
+      <pose relative_to='__model__'>0 0 0 0 -0 0</pose>
+      <parent>world</parent>
+      <child>base_link</child>
+    </joint>
+    
+    
+    <link name='base_link'>
+      <pose relative_to='fixed'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>2.8</mass>
+        <inertia>
+          <ixx>0.03</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.03</iyy>
+          <iyz>0</iyz>
+          <izz>0.03</izz>
+        </inertia>
+      </inertial>
+      
+      <collision name='base_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://dobot_description/meshes/base_link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      
+      <visual name='base_link_visual'>
+        <pose>0 0 0 0 -0 3.14159</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://dobot_description/meshes/base_link.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    
+    <joint name='joint_1' type='revolute'>
+      <pose relative_to='base_link'>0 0 0.024 0 0 -1.5708</pose>
+      <parent>base_link</parent>
+      <child>link_1</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-1.5708</lower>
+          <upper>1.5708</upper>
+          <effort>150</effort>
+          <velocity>3.15</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    
+    
+    <link name='link_1'>
+      <pose relative_to='joint_1'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.1</mass>
+        <inertia>
+          <ixx>0.03</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.03</iyy>
+          <iyz>0</iyz>
+          <izz>0.03</izz>
+        </inertia>
+      </inertial>
+      
+      <collision name='link_1_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://dobot_description/meshes/link_1.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      
+      <visual name='link_1_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://dobot_description/meshes/link_1.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    
+    <joint name='joint_2' type='revolute'>
+      <pose relative_to='link_1'>-0.01175 0 0.114 1.5708 0 -1.5708</pose>
+      <parent>link_1</parent>
+      <child>link_2</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>1.48353</upper>
+          <effort>150</effort>
+          <velocity>3.15</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    
+    
+    <link name='link_2'>
+      <pose relative_to='joint_2'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.1</mass>
+        <inertia>
+          <ixx>0.03</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.03</iyy>
+          <iyz>0</iyz>
+          <izz>0.03</izz>
+        </inertia>
+      </inertial>
+      
+      <collision name='link_2_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://dobot_description/meshes/link_2.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      
+      <visual name='link_2_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://dobot_description/meshes/link_2.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    
+    <joint name='joint_3' type='revolute'>
+      <pose relative_to='link_2'>0.02699 0.13228 -0.01175 3.14159 0 3.14159</pose>
+      <parent>link_2</parent>
+      <child>link_3</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-0.174533</lower>
+          <upper>1.5708</upper>
+          <effort>150</effort>
+          <velocity>3.15</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    
+    
+    <link name='link_3'>
+      <pose relative_to='joint_3'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.1</mass>
+        <inertia>
+          <ixx>0.03</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.03</iyy>
+          <iyz>0</iyz>
+          <izz>0.03</izz>
+        </inertia>
+      </inertial>
+      
+      <collision name='link_3_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://dobot_description/meshes/link_3.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      
+      <visual name='link_3_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://dobot_description/meshes/link_3.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    
+    <joint name='joint_4' type='revolute'>
+      <pose relative_to='link_3'>0.07431 -0.12684 0 3.14159 0 3.14159</pose>
+      <parent>link_3</parent>
+      <child>link_4</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-1.5708</lower>
+          <upper>1.5708</upper>
+          <effort>150</effort>
+          <velocity>3.15</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    
+    
+    <link name='link_4'>
+      <pose relative_to='joint_4'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.3</mass>
+        <inertia>
+          <ixx>0.09</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.09</iyy>
+          <iyz>0</iyz>
+          <izz>0.09</izz>
+        </inertia>
+      </inertial>
+      
+      <collision name='link_4_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://dobot_description/meshes/link_4.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      
+      <collision name='link_4_fixed_joint_lump__link_end_collision_1'>
+        <pose>-0.056 0 0 1.57 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.008</length>
+            <radius>0.016</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      
+      <collision name='link_4_fixed_joint_lump__link_end_collision_2'>
+        <pose>-0.056 -0.008 0 1.57 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.024</length>
+            <radius>0.01</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      
+      <collision name='link_4_fixed_joint_lump__link_end_collision_3'>
+        <pose>-0.056 -0.008 0 1.57 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.032</length>
+            <radius>0.006</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      
+      <collision name='link_4_fixed_joint_lump__link_probe_collision_collision_4'>
+        <pose>-0.056 -0.016 0 1.57 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.048</length>
+            <radius>0.004</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      
+      <visual name='link_4_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://dobot_description/meshes/link_4.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      
+      <visual name='link_4_fixed_joint_lump__link_end_visual_1'>
+        <pose>-0.056 0 0 1.57 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.008</length>
+            <radius>0.016</radius>
+          </cylinder>
+        </geometry>
+      </visual>
+      
+      <visual name='link_4_fixed_joint_lump__link_end_visual_2'>
+        <pose>-0.056 -0.008 0 1.57 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.024</length>
+            <radius>0.01</radius>
+          </cylinder>
+        </geometry>
+      </visual>
+      
+      <visual name='link_4_fixed_joint_lump__link_end_visual_3'>
+        <pose>-0.056 -0.008 0 1.57 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.032</length>
+            <radius>0.006</radius>
+          </cylinder>
+        </geometry>
+      </visual>
+      
+      <visual name='link_4_fixed_joint_lump__link_probe_visual_4'>
+        <pose>-0.056 -0.016 0 1.57 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.048</length>
+            <radius>0.004</radius>
+          </cylinder>
+        </geometry>
+      </visual>
+    </link>
+    
+  </model>
+</sdf>

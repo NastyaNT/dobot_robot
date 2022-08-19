@@ -1,0 +1,28 @@
+dobot_arm_controller:
+  type: position_controllers/JointTrajectoryController
+  joints:
+    - joint12
+    - joint23
+    - joint34
+    - joint45
+  gains:
+    joint12:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    joint23:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    joint34:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    joint45:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1

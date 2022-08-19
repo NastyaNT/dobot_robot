@@ -1,0 +1,10 @@
+controller_list:
+  - name: dobot_arm_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: True
+    joints:
+      - joint12
+      - joint23
+      - joint34
+      - joint45
