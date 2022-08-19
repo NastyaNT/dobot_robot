@@ -7,7 +7,6 @@
 5. git pull
 6. git push
     1. Логин: NastyaNT
-    2. Пароль: ghp_0G81cNSu9myGWWHidtv3U5BN84oKeZ2Oxi7 <br/>
-[Как создать пароль смотри здесь](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) 
+    2. Пароль: [Как создать пароль смотри здесь](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) 
 ## Добавляем изменнеия из репозитория
 1. git merge origin
