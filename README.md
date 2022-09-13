@@ -3,6 +3,10 @@
 - ROS noetic
 - Gazebo 11
 - Moveit 1
+## Доп пакеты
+- sudo apt-get install ros-noetic-ros-control
+- sudo apt-get install ros-noetic-ros-controllers
+- sudo apt-get install ros-noetic-controller-manager
 ## Работа с github через консоль https://htmlacademy.ru/blog/best/git-console
 ### Скачиваем к себе репозиторий, делаем изменения у себя, добавляемя изменнеия в репозитоий
 1. git clone https://github.com/NastyaNT/dobot_robot.git
