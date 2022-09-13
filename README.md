@@ -48,3 +48,7 @@
 ## Для движения модели в gazebo
 1. в файл ros_controllers.launch добавляем строку: <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="true" output="screen"/>
 2. в файл gazebo.launch добавляем: command="xacro  '$(find dobot_description)/urdf/dobot_with_probe_from.xacro'"
+## Просмотр информации с датчкиа
+1. добавить плагин в файл описания
+- узнать имя коллизии нужного объекта в sdf (С xacro в urdf: xacro dobot_with_probe_from.xacro > dobot.urdf, с urdf в sdf: gz sdf -p dobot.urdf > dobot.sdf)
+3. rostopic echo /dobot_contact/link_probe -n1
